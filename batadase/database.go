@@ -1,24 +1,14 @@
 package batadase
 
-import "database/sql"
+import (
+	"database/sql"
+	"main/albumsType"
+)
 
 func handleError(e error) {
 	if e != nil {
 		panic(e)
 	}
-}
-
-type Album struct {
-	Name   string
-	Year   string
-	Artist string
-}
-
-type parsedAlbum struct {
-	ID     int
-	Name   string
-	Year   string
-	Artist string
 }
 
 func ConnectToDB() *sql.DB {
@@ -30,21 +20,21 @@ func ConnectToDB() *sql.DB {
 
 }
 
-func GetAlbums(db *sql.DB) []Album {
+func GetAlbums(db *sql.DB) []albumsType.Album {
 
 	items, e := db.Query("SELECT * FROM albumstable;")
 	handleError(e)
 
-	var albums []Album
+	var albums []albumsType.Album
 
 	for items.Next() {
 
-		var newParsedAlbum parsedAlbum
+		var newParsedAlbum albumsType.ParsedAlbum
 
 		e := items.Scan(&newParsedAlbum.ID, &newParsedAlbum.Name, &newParsedAlbum.Year, &newParsedAlbum.Artist)
 		handleError(e)
 
-		var newAlbum = Album{
+		var newAlbum = albumsType.Album{
 			Name:   newParsedAlbum.Name,
 			Year:   newParsedAlbum.Year,
 			Artist: newParsedAlbum.Artist,
@@ -64,7 +54,7 @@ func AddToDatabase(db *sql.DB, name string, year string, artist string) {
 
 }
 
-func DeleteAlbums(db *sql.DB) Album {
+func DeleteAlbums(db *sql.DB) albumsType.Album {
 
 	album, e := db.Query("SELECT * FROM albumstable WHERE ID = (SELECT MAX(ID) FROM albumstable);")
 	handleError(e)
@@ -72,15 +62,15 @@ func DeleteAlbums(db *sql.DB) Album {
 	_, e = db.Exec("DELETE FROM albumstable WHERE ID = (SELECT MAX(ID) FROM albumstable);")
 	handleError(e)
 
-	var albumToDelete Album
+	var albumToDelete albumsType.Album
 
 	for album.Next() {
-		var newParsedAlbum parsedAlbum
+		var newParsedAlbum albumsType.ParsedAlbum
 
 		e := album.Scan(&newParsedAlbum.ID, &newParsedAlbum.Name, &newParsedAlbum.Year, &newParsedAlbum.Artist)
 		handleError(e)
 
-		albumToDelete = Album{
+		albumToDelete = albumsType.Album{
 			Name:   newParsedAlbum.Name,
 			Year:   newParsedAlbum.Year,
 			Artist: newParsedAlbum.Artist,
