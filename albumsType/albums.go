@@ -32,7 +32,7 @@ func WriteLogToALogFile(v any, request http.Request) {
 
 	case Album:
 
-		logBody := fmt.Sprintf("\nTime: %s\nName: %s\nArtist: %s\nYear: %s\nMethod: %s\n--------------------------------------", time.Now().GoString(), value.Name, value.Artist, value.Year, request.Method)
+		logBody := fmt.Sprintf("\nName: %s\nArtist: %s\nYear: %s\n\nTime: %s\nRequest: %s\n--------------------------------------\n", value.Name, value.Artist, value.Year, time.Now().GoString(), request.Method)
 
 		file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
 		checkErrors(e)
@@ -44,7 +44,7 @@ func WriteLogToALogFile(v any, request http.Request) {
 
 		for _, album := range value {
 
-			logBody := fmt.Sprintf("\nTime: %s\nName: %s\nArtist: %s\nYear: %s", time.Now().GoString(), album.Name, album.Artist, album.Year)
+			logBody := fmt.Sprintf("\nName: %s\nArtist: %s\nYear: %s\n", album.Name, album.Artist, album.Year)
 
 			file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
 			checkErrors(e)
@@ -57,7 +57,8 @@ func WriteLogToALogFile(v any, request http.Request) {
 		checkErrors(e)
 		defer file.Close()
 
-		file.WriteString("\n" + request.Method)
+		file.WriteString("\nTime: " + time.Now().GoString())
+		file.WriteString("\nrequest: " + request.Method)
 		file.WriteString("\n----------------------------------------------------\n")
 
 	}

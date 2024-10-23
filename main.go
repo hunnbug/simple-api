@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"main/albumsType"
 	"main/batadase"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 
@@ -26,7 +25,7 @@ func getAlbums(ctx *gin.Context) {
 	albums := batadase.GetAlbums(db)
 	ctx.IndentedJSON(200, albums)
 
-	albumsType.WriteLogToALogFile(albums, http.Request{Method: "GET"})
+	albumsType.WriteLogToALogFile(albums, *ctx.Request)
 
 }
 
@@ -37,17 +36,17 @@ func postAlbum(ctx *gin.Context) {
 	e := ctx.BindJSON(&newAlbum)
 	checkErrors(e)
 
-	albumsType.WriteLogToALogFile(newAlbum, http.Request{Method: "POST"})
+	albumsType.WriteLogToALogFile(newAlbum, *ctx.Request)
 
 	batadase.AddToDatabase(db, newAlbum.Name, newAlbum.Year, newAlbum.Artist)
 
 }
 
-func deleteAlbum(_ *gin.Context) {
+func deleteAlbum(ctx *gin.Context) {
 
 	deletedAlbum := batadase.DeleteAlbums(db)
 
-	albumsType.WriteLogToALogFile(deletedAlbum, http.Request{Method: "DELETE"})
+	albumsType.WriteLogToALogFile(deletedAlbum, *ctx.Request)
 
 }
 
