@@ -26,41 +26,39 @@ func checkErrors(e error) {
 	}
 }
 
-type Log interface {
-	WriteLogToALogFile(http.Request)
-}
+func WriteLogToALogFile(v any, request http.Request) {
 
-func (album Album) WriteLogToALogFile(request http.Request) {
+	switch value := v.(type) {
 
-	logBody := fmt.Sprintf("\nTime: %s\nName: %s\nArtist: %s\nYear: %s\nMethod: %s\n--------------------------------------", time.Now().GoString(), album.Name, album.Artist, album.Year, request.Method)
+	case Album:
 
-	file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
-	checkErrors(e)
-	defer file.Close()
-
-	file.WriteString(logBody)
-
-}
-
-type albums []Album
-
-func (al albums) WriteLogToALogFile(request http.Request) {
-
-	for _, album := range al {
-
-		logBody := fmt.Sprintf("\nTime: %s\nName: %s\nArtist: %s\nYear: %s\nMethod: %s", time.Now().GoString(), album.Name, album.Artist, album.Year, request.Method)
+		logBody := fmt.Sprintf("\nTime: %s\nName: %s\nArtist: %s\nYear: %s\nMethod: %s\n--------------------------------------", time.Now().GoString(), value.Name, value.Artist, value.Year, request.Method)
 
 		file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
 		checkErrors(e)
+		defer file.Close()
 
 		file.WriteString(logBody)
 
+	case []Album:
+
+		for _, album := range value {
+
+			logBody := fmt.Sprintf("\nTime: %s\nName: %s\nArtist: %s\nYear: %s", time.Now().GoString(), album.Name, album.Artist, album.Year)
+
+			file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
+			checkErrors(e)
+
+			file.WriteString(logBody)
+
+		}
+
+		file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
+		checkErrors(e)
+		defer file.Close()
+
+		file.WriteString("\n" + request.Method)
+		file.WriteString("\n----------------------------------------------------\n")
+
 	}
-
-	file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
-	checkErrors(e)
-	defer file.Close()
-
-	file.WriteString("----------------------------------------------------")
-
 }

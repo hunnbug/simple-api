@@ -1,0 +1,63 @@
+
+Time: time.Date(2024, time.October, 23, 14, 6, 27, 342408656, time.Local)
+Name: Favorite Worst Nightmare
+Artist: Arctic Monkeys
+Year: 2007
+Time: time.Date(2024, time.October, 23, 14, 6, 27, 342633420, time.Local)
+Name: AM
+Artist: Arctic Monkeys
+Year: 2013
+GET
+
+----------------------------------------------------
+
+Time: time.Date(2024, time.October, 23, 14, 6, 58, 578774674, time.Local)
+Name: Favorite Worst Nightmare
+Artist: Arctic Monkeys
+Year: 2007
+Time: time.Date(2024, time.October, 23, 14, 6, 58, 578910741, time.Local)
+Name: AM
+Artist: Arctic Monkeys
+Year: 2013
+GET
+----------------------------------------------------
+
+Time: time.Date(2024, time.October, 23, 14, 7, 13, 321052488, time.Local)
+Name: Favorite Worst Nightmare
+Artist: Arctic Monkeys
+Year: 2007
+Time: time.Date(2024, time.October, 23, 14, 7, 13, 321156083, time.Local)
+Name: AM
+Artist: Arctic Monkeys
+Year: 2013
+GET
+----------------------------------------------------
+
+Time: time.Date(2024, time.October, 23, 14, 7, 20, 724117248, time.Local)
+Name: Favorite Worst Nightmare
+Artist: Arctic Monkeys
+Year: 2007
+Time: time.Date(2024, time.October, 23, 14, 7, 20, 724241092, time.Local)
+Name: AM
+Artist: Arctic Monkeys
+Year: 2013
+GET
+----------------------------------------------------
+
+Time: time.Date(2024, time.October, 23, 14, 7, 22, 547359562, time.Local)
+Name: Favorite Worst Nightmare
+Artist: Arctic Monkeys
+Year: 2007
+Time: time.Date(2024, time.October, 23, 14, 7, 22, 547435786, time.Local)
+Name: AM
+Artist: Arctic Monkeys
+Year: 2013
+GET
+----------------------------------------------------
+
+Time: time.Date(2024, time.October, 23, 14, 8, 28, 82148607, time.Local)
+Name: A Place For Us To Dream
+Artist: Placebo
+Year: 2016
+Method: PUT
+--------------------------------------
