@@ -5,24 +5,29 @@ import (
 	"main/albumsType"
 )
 
+var DB *sql.DB
+
 func handleError(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
-func ConnectToDB() *sql.DB {
+func ConnectToDB() {
 
-	db, e := sql.Open("postgres", "host=localhost port=5432 user=postgres password=1 dbname=albums sslmode=disable")
+	var e error
+
+	DB, e = sql.Open("postgres", "host=localhost port=5432 user=postgres password=1 dbname=albums sslmode=disable")
 	handleError(e)
 
-	return db
+	DB.Ping()
+	handleError(e)
 
 }
 
-func GetAlbums(db *sql.DB) []albumsType.Album {
+func GetAlbums() []albumsType.Album {
 
-	items, e := db.Query("SELECT * FROM albumstable;")
+	items, e := DB.Query("SELECT * FROM albumstable;")
 	handleError(e)
 
 	var albums []albumsType.Album
@@ -47,19 +52,19 @@ func GetAlbums(db *sql.DB) []albumsType.Album {
 	return albums
 }
 
-func AddToDatabase(db *sql.DB, name string, year string, artist string) {
+func AddToDatabase(name string, year string, artist string) {
 
-	_, e := db.Exec("INSERT INTO albumstable (Name, Year, Artist) VALUES ($1, $2, $3)", name, year, artist)
+	_, e := DB.Exec("INSERT INTO albumstable (Name, Year, Artist) VALUES ($1, $2, $3)", name, year, artist)
 	handleError(e)
 
 }
 
-func DeleteAlbums(db *sql.DB) albumsType.Album {
+func DeleteAlbums() albumsType.Album {
 
-	album, e := db.Query("SELECT * FROM albumstable WHERE ID = (SELECT MAX(ID) FROM albumstable);")
+	album, e := DB.Query("SELECT * FROM albumstable WHERE ID = (SELECT MAX(ID) FROM albumstable);")
 	handleError(e)
 
-	_, e = db.Exec("DELETE FROM albumstable WHERE ID = (SELECT MAX(ID) FROM albumstable);")
+	_, e = DB.Exec("DELETE FROM albumstable WHERE ID = (SELECT MAX(ID) FROM albumstable);")
 	handleError(e)
 
 	var albumToDelete albumsType.Album

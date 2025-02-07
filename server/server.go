@@ -1,15 +1,12 @@
 package server
 
 import (
-	"database/sql"
 	"main/albumsType"
 	"main/batadase"
 	"main/loggingSystem"
 
 	"github.com/gin-gonic/gin"
 )
-
-var db *sql.DB
 
 func checkErrors(e error) {
 
@@ -21,7 +18,7 @@ func checkErrors(e error) {
 
 func getAlbums(ctx *gin.Context) {
 
-	albums := batadase.GetAlbums(db)
+	albums := batadase.GetAlbums()
 	ctx.IndentedJSON(200, albums)
 
 	loggingSystem.WriteLogToALogFile(albums, *ctx.Request)
@@ -37,27 +34,25 @@ func postAlbum(ctx *gin.Context) {
 
 	loggingSystem.WriteLogToALogFile(newAlbum, *ctx.Request)
 
-	batadase.AddToDatabase(db, newAlbum.Name, newAlbum.Year, newAlbum.Artist)
+	batadase.AddToDatabase(newAlbum.Name, newAlbum.Year, newAlbum.Artist)
 
 }
 
 func deleteAlbum(ctx *gin.Context) {
 
-	deletedAlbum := batadase.DeleteAlbums(db)
+	deletedAlbum := batadase.DeleteAlbums()
 
 	loggingSystem.WriteLogToALogFile(deletedAlbum, *ctx.Request)
 
 }
 
-func StartServer(a *sql.DB) {
-
-	db = a
+func StartServer() {
 
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 	router.POST("/albums", postAlbum)
 	router.DELETE("/albums", deleteAlbum)
 
-	router.Run("localhost:8080")
+	router.Run("192.168.1.78:8080")
 
 }

@@ -20,7 +20,7 @@ func WriteLogToALogFile(v any, request http.Request) {
 
 	case albumsType.Album:
 
-		logBody := fmt.Sprintf("\nName: %s\nArtist: %s\nYear: %s\n\nTime: %s\nRequest: %s\n--------------------------------------\n", value.Name, value.Artist, value.Year, time.Now().GoString(), request.Method)
+		logBody := fmt.Sprintf("\nName: %s\nArtist: %s\nYear: %s\n\nTime: %s\nRequest: %s\n----------------------------------------------------\n", value.Name, value.Artist, value.Year, time.Now().GoString(), request.Method)
 
 		file, e := os.OpenFile("logs.log", os.O_APPEND|os.O_WRONLY, 0644)
 		checkErrors(e)

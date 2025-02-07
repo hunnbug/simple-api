@@ -1,208 +1,316 @@
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 23, 14, 27, 44, 872646225, time.Local)
-Request: POST
---------------------------------------
-Name: Favorite Worst Nightmare
+Name: AM
 Artist: Arctic Monkeys
-Year: 2007
+Year: 2013
+
+Time: time.Date(2024, time.October, 24, 19, 41, 6, 181260800, time.Local)
+request: GET
+----------------------------------------------------
 
 Name: AM
 Artist: Arctic Monkeys
 Year: 2013
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 23, 14, 27, 51, 350795025, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 41, 59, 654599700, time.Local)
 request: GET
 ----------------------------------------------------
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 23, 14, 28, 9, 100518338, time.Local)
-Request: DELETE
---------------------------------------
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 23, 14, 28, 17, 130905825, time.Local)
-Request: DELETE
---------------------------------------
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 23, 14, 28, 17, 408773881, time.Local)
-Request: DELETE
---------------------------------------
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
 
 Name: AM
 Artist: Arctic Monkeys
 Year: 2013
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 23, 14, 28, 19, 485722437, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 43, 46, 196476400, time.Local)
 request: GET
 ----------------------------------------------------
-
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
 
 Name: AM
 Artist: Arctic Monkeys
 Year: 2013
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 48, 23, 581404130, time.Local)
-request: GET
-----------------------------------------------------
-
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
-
-Name: AM
-Artist: Arctic Monkeys
-Year: 2013
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 48, 40, 983263864, time.Local)
-request: GET
-----------------------------------------------------
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 48, 52, 376412534, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 43, 54, 416951000, time.Local)
 Request: DELETE
 --------------------------------------
 
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
-
-Name: AM
-Artist: Arctic Monkeys
-Year: 2013
-
-Time: time.Date(2024, time.October, 24, 14, 48, 59, 785575450, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 43, 57, 906310000, time.Local)
 request: GET
 ----------------------------------------------------
 
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
-
-Name: AM
-Artist: Arctic Monkeys
-Year: 2013
-
-Time: time.Date(2024, time.October, 24, 14, 49, 8, 180877773, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 50, 2, 944917800, time.Local)
 request: GET
 ----------------------------------------------------
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
+Name: popa
+Artist: kizilam
+Year: 2024
 
-Time: time.Date(2024, time.October, 24, 14, 49, 46, 360933715, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 50, 30, 78047200, time.Local)
 Request: POST
 --------------------------------------
 
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
+Name: popa
+Artist: kizilam
+Year: 2024
 
-Name: AM
-Artist: Arctic Monkeys
-Year: 2013
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 49, 59, 837377072, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 50, 34, 864649700, time.Local)
 request: GET
 ----------------------------------------------------
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 50, 5, 340339865, time.Local)
-Request: POST
---------------------------------------
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 50, 6, 665605840, time.Local)
-Request: POST
---------------------------------------
-
-Name: Favorite Worst Nightmare
-Artist: Arctic Monkeys
-Year: 2007
-
-Name: AM
-Artist: Arctic Monkeys
-Year: 2013
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
-
-Time: time.Date(2024, time.October, 24, 14, 50, 10, 91028273, time.Local)
+Time: time.Date(2024, time.October, 24, 19, 52, 51, 40286200, time.Local)
 request: GET
 ----------------------------------------------------
 
-Name: A Place For Us To Dream
-Artist: Placebo
-Year: 2016
+Name: popa
+Artist: kizilam
+Year: 2024
 
-Time: time.Date(2024, time.October, 24, 15, 17, 44, 967486992, time.Local)
-Request: DELETE
+Time: time.Date(2024, time.October, 24, 19, 53, 40, 689729000, time.Local)
+Request: POST
 --------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 19, 53, 40, 895602900, time.Local)
+Request: POST
+--------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 19, 53, 41, 85830300, time.Local)
+Request: POST
+--------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 19, 53, 41, 280549800, time.Local)
+Request: POST
+--------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 19, 53, 41, 396779500, time.Local)
+Request: POST
+--------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 19, 53, 43, 730935300, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 22, 32, 19, 765604000, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 22, 34, 2, 904560000, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 22, 34, 5, 607218700, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 22, 34, 5, 737838700, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 22, 34, 5, 880281800, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.October, 24, 22, 34, 6, 10085600, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2024, time.November, 17, 22, 8, 10, 400593700, time.Local)
+request: GET
+----------------------------------------------------
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Name: popa
+Artist: kizilam
+Year: 2024
+
+Time: time.Date(2025, time.January, 12, 11, 31, 19, 564125900, time.Local)
+request: GET
+----------------------------------------------------
